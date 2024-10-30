@@ -1,6 +1,8 @@
 /**
- * Copyright 2023 Ahnaf Al Nafis <ahnafalnafis@gmail.com>
+ * Copyright (C) 2023 Ahnaf Al Nafis
+ * SPDX-License-Identifier: MIT
  */
+
 #include <filesystem>
 #include <iostream>
 #include <string>

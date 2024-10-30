@@ -2,7 +2,6 @@
 #define SRC_UTIL_H_
 
 #include <string>
-#include <string_view>
 
 std::string removeEndSlash(std::string &dir_path);
 std::string removeCurrentDirectory(std::string &file_name,
