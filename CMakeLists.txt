@@ -1,15 +1,24 @@
 cmake_minimum_required(VERSION 3.15)
 
+# Compiler options:
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 
+# Project:
 project(
   ls-files
   VERSION 0.0.1
   LANGUAGES CXX)
 
-add_compile_options(-Wall -Wextra -g)
+# Declarations:
+set(SOURCE_DIR ${PROJECT_SOURCE_DIR}/src)
+set(EXECUTABLE_NAME ${PROJECT_NAME})
 
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
-add_executable(ls-files src/main.cpp)
+# Executable:
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+add_executable(${EXECUTABLE_NAME})
+
+# Sub directories:
+add_subdirectory(${SOURCE_DIR})
+include_directories(${SOURCE_DIR})
